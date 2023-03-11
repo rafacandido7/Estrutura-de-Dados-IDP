@@ -1,0 +1,1 @@
+Repositório destinado aos exercícios feitos da disciplina de Estrutura de Dados.
