@@ -7,17 +7,16 @@ struct Person {
 };
 
 void idealWeightForEachPerson (int nPersons) {
-
   for (int i = 0; i < nPersons; i++) {
     struct Person _person;
 
     printf("A partir de agora colheremos as informações da %dª pessoa \n", i + 1);
 
     printf("Digite o sexo (F ou M) da %dª pessoa:\n", i + 1);
-    scanf("%c", &_person.sex);
+    scanf(" %c", &_person.sex);
 
-    // printf("Digite a altura (em metros) da %dª pessoa:\n", i + 1);
-    // scanf("%f", &_person.height);
+    printf("Digite a altura (em metros) da %dª pessoa:\n", i + 1);
+    scanf("%f", &_person.height);
 
     if (_person.sex == 'F') {
       _person.weight = (62.1 * _person.height - 44.7);
