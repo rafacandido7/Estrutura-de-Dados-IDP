@@ -18,6 +18,11 @@ void idealWeightForEachPerson (int nPersons) {
     printf("Digite a altura (em metros) da %dª pessoa:\n", i + 1);
     scanf("%f", &_person.height);
 
+    if (_person.sex != ('M' || 'F')) {
+      printf("O sexo digitado é inválido!");
+      break;
+    }
+
     if (_person.sex == 'F') {
       _person.weight = (62.1 * _person.height - 44.7);
 
@@ -29,6 +34,7 @@ void idealWeightForEachPerson (int nPersons) {
 
       printf("O peso ideal para a %d pessoa é %f kg\n", i + 1, _person.weight);
     }
+
   }
 }
 

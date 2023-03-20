@@ -16,7 +16,7 @@ int main() {
   int n;
   int *p = &n;
 
-  printf("QUantidade de coelhos após N meses!\n");
+  printf("Quantidade de coelhos após N meses!\n");
 
   printf("Insira a quantiadade de meses: \n");
   scanf("%d", p);
