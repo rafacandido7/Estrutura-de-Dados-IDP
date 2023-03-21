@@ -4,7 +4,7 @@
             "name": "C/C++: gcc Compilar e depurar o arquivo ativo",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExte nsion}",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
