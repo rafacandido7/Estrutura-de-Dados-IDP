@@ -9,7 +9,6 @@ int getLength () {
   return length;
 }
 
-
 int* readVector (int length) {
   int* vector = (int*)malloc(length*sizeof(int));
   printf("Digite os valores do vetor: \n");
