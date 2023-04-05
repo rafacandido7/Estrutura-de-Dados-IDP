@@ -1,33 +1,34 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "listas.h"
+#include<stdio.h>
+#include<stdlib.h>
 
-typedef struct lista_int_no ListaIntNo;
-typedef struct lista_head ListaHead;
+typedef struct lista_no ListaNo;
+typedef struct lista Lista;
 
-struct lista_int_no {
+struct lista_no {
   int v;
-  ListaIntNo *prox;
+  ListaNo *prox;
 };
 
-struct lista_head {
-  ListaIntNo *primeiro;
+struct lista {
+  ListaNo *primeiro;
 };
 
-ListaHead* cria_lista() {
-  ListaHead *l = (*ListaHead)malloc(sizeof(ListaHead));
+Lista* lista_cria() {
+  Lista* l = (Lista*)malloc(sizeof(Lista));
   l -> primeiro = NULL;
   return l;
 };
 
-void adiciona_elemento(ListaHead* l, int v) {
-  ListaIntNo *novo = (*ListaIntNo)malloc(sizeof(ListaIntNo));
+void lista_insere(Lista* l, int v) {
+  ListaNo *novo = (ListaNo*)malloc(sizeof(ListaNo));
   novo -> prox = l -> primeiro;
   novo -> v = v;
   l -> primeiro = novo;
 };
 
-void exibe_lista(ListaHead* l) {
-  ListaIntNo* atual;
+void lista_imprime(Lista* l) {
+  ListaNo* atual;
   atual = l -> primeiro;
   printf("Lista de elementos: ");
   for (atual = l -> primeiro; atual -> prox != NULL; atual = atual -> prox) {
@@ -35,11 +36,10 @@ void exibe_lista(ListaHead* l) {
   }
 }
 
-int main() {
-  ListaHead *l = cria_lista();
-  adiciona_elemento(l, 5);
-  adiciona_elemento(l, 2);
-  adiciona_elemento(l, -1);
+int pertence(Lista* l, int value);
+void lista_retira(Lista* l, int value);
+int lista_vazia(Lista* l);
+void libera_lista(Lista* l);
 
-  return 0;
-}
+
+
