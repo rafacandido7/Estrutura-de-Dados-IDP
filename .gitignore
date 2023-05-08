@@ -1,6 +1,7 @@
 exemplos
 output
 .vscode
+.DS_Store
 
 # Prerequisites
 *.d
